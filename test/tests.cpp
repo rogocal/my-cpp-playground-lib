@@ -10,3 +10,8 @@ TEST_CASE("Car from file", "[Car]") {
   auto car = Car::FromFile("../../data/otherCar.json");
   REQUIRE(car.getName() == "Ford");
 }
+
+TEST_CASE("Car version", "[Car]") {
+  Car::printVersion();
+  REQUIRE(1 == 1);
+}

@@ -6,15 +6,15 @@ project(
   DESCRIPTION "Car Library"
   LANGUAGES C CXX)
 
-MESSAGE("Configuring version.h ...")
-configure_file("${PROJECT_SOURCE_DIR}/version.h.in"
-               "${PROJECT_SOURCE_DIR}/version.h")
+message("Configuring version.h")
+configure_file("version.h.in" "version.h")
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(JSONCPP jsoncpp)
 
 # Configure headers and sources
-set(PUBLIC_HEADERS "car.hpp version.h")
+set(PUBLIC_HEADERS "car.hpp")
 set(MY_LIB_SOURCES "car.cpp")
 
 # Create SHARED Library Object
