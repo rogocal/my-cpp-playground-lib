@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(
-  simulator
-  VERSION 1.0.0
-  DESCRIPTION "General purpose cmake project"
-  LANGUAGES C CXX)
+project(ProjectConfig)
 
 include(cmake/StandardProjectSettings.cmake)
 include(cmake/PreventInSourceBuilds.cmake)
@@ -35,7 +31,7 @@ set(BIN_DIR "${CMAKE_SOURCE_DIR}/bin/${PLATFORM_DIR}/${BUILD_TYPE_DIR}")
 add_subdirectory(src)
 
 # option(BUILD_SHARED_LIBS "Enable compilation of shared libraries" OFF)
-option(ENABLE_TESTING "Enable Test Builds" OFF)
+option(ENABLE_TESTING "Enable Test Builds" ON)
 
 if(ENABLE_TESTING)
   enable_testing()
