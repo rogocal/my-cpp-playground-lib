@@ -1,0 +1,12 @@
+{
+    "carName": "McLaren",
+    "my-plug-ins": [
+        "python",
+        "c++",
+        "ruby"
+    ],
+    "my-indent": {
+        "length": 3,
+        "use_space": true
+    }
+}
