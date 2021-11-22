@@ -24,6 +24,7 @@ public:
   explicit Car(const std::string &_name);
   static Car FromFile(std::string path);
   void printInfo() const;
+  static void printVersion();
   void start();
 
   std::string getName() const { return name; }

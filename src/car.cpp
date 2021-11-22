@@ -1,4 +1,5 @@
 #include "car.hpp"
+#include "version.h"
 #include <fstream>
 #include <iostream>
 #include <jsoncpp/json/json.h>
@@ -16,7 +17,11 @@ Car Car::FromFile(std::string path) {
   }
   return Car(name);
 }
-void Car::printInfo() const{
-  std::cout << "Car 1.2 " << name << " status: " << status << '\n';
+void Car::printInfo() const {
+  std::cout << "Car " << name << " status: " << status << '\n';
+}
+void Car::printVersion() {
+  std::cout << "project name: " << PROJECT_NAME << " version: " << PROJECT_VER
+            << std::endl;
 }
 void Car::start() { status = "running"; }

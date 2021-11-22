@@ -6,11 +6,15 @@ project(
   DESCRIPTION "Car Library"
   LANGUAGES C CXX)
 
+MESSAGE("Configuring version.h ...")
+configure_file("${PROJECT_SOURCE_DIR}/version.h.in"
+               "${PROJECT_SOURCE_DIR}/version.h")
+
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(JSONCPP jsoncpp)
 
 # Configure headers and sources
-set(PUBLIC_HEADERS "car.hpp")
+set(PUBLIC_HEADERS "car.hpp version.h")
 set(MY_LIB_SOURCES "car.cpp")
 
 # Create SHARED Library Object
